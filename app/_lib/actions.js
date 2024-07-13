@@ -81,7 +81,7 @@ export async function deleteBooking(bookingId) {
   }
 
   if (bookingInfo.guestId !== session?.user?.guestId) {
-    throw new Error("You can't delete this booking");
+    throw new Error("You cant delete this booking");
   }
 
   await deleteHandler(bookingId);
@@ -102,7 +102,7 @@ export async function updateBooking(formData) {
   }
 
   if (bookingInfo.guestId !== session?.user?.guestId) {
-    throw new Error("You can't Update this booking");
+    throw new Error("You cant Update this booking");
   }
 
   const updateFeilds = {
